@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals – Part 2</title>
+
+    <H1>Coding Challenge #1</H1>
+    <SCRipt>
+        const calcAverage = (scores) => {
+            const sum = scores.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            return sum / scores.length;
+
+        }
+
+        const avgDolphins = calcAverage([44, 23, 71]);
+        const avgKoalas = calcAverage([65, 54, 49]);
+
+        const checkWinner = (avgDolphins, avgKoalas) => {
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+            } else if (avgKoalas >= 2 * avgDolphins) {
+                console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+            } else {
+                console.log("No team win");
+            }
+        };
+
+        console.log("Data 1")
+        checkWinner(avgDolphins, avgKoalas);
+
+        console.log("Data 2")
+        const avgDolphins2 = calcAverage([85, 54, 41]);
+        const avgKoalas2 = calcAverage([23, 34, 27]);
+        checkWinner(avgDolphins2, avgKoalas2);
+    </SCRipt>
+
+
+
+</head>
+
+
+
+<body>
+
+</body>
+
+</html>
